@@ -81,7 +81,7 @@ export function FloatingWhatsApp() {
 
       {/* Button */}
       <Link
-        href="https://wa.me/919522244453"
+        href="https://wa.me/919522244453?text=Hi!%20I'm%20interested%20in%20solar%20panel%20installation%20for%20my%20home.%20Can%20you%20help%3F"
         target="_blank"
         rel="noreferrer"
         aria-label="Chat with us on WhatsApp"
