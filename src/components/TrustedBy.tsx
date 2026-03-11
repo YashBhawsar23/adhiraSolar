@@ -40,7 +40,9 @@ export function TrustedBy() {
       <div className="tb-footer">
         <div className="tb-dot" />
         <span className="tb-footer-text">
-          <span className="tb-footer-highlight">India&apos;s leading brands</span>{" "}
+          <span className="tb-footer-highlight">
+            India&apos;s leading brands
+          </span>{" "}
           trust Adhira Solar for clean energy solutions
         </span>
         <div className="tb-dot" />
@@ -48,4 +50,3 @@ export function TrustedBy() {
     </section>
   );
 }
-
