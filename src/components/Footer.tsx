@@ -15,7 +15,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <p className="text-base font-semibold text-white">
-              SunPower <span className="text-solar-400">Solar</span>
+              Adhira <span className="text-solar-400">Solar</span>
             </p>
             <p className="mt-3 text-sm leading-6 text-white/70">
               Clean, reliable solar solutions for homes and businesses. From
@@ -68,7 +68,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex justify-center border-t border-white/10 pt-6 text-xs text-white/50">
-          <p>© 2026 SunPower Solar. All rights reserved.</p>
+          <p>© 2026 Adhira Solar. All rights reserved.</p>
         </div>
       </Container>
     </footer>

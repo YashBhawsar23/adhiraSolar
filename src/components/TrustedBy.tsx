@@ -41,7 +41,7 @@ export function TrustedBy() {
         <div className="tb-dot" />
         <span className="tb-footer-text">
           <span className="tb-footer-highlight">India&apos;s leading brands</span>{" "}
-          trust SunPower Solar for clean energy solutions
+          trust Adhira Solar for clean energy solutions
         </span>
         <div className="tb-dot" />
       </div>

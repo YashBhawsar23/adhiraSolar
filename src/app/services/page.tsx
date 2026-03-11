@@ -9,7 +9,7 @@ import { detailedCategories } from "@/lib/services-detailed";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Solar installation, maintenance, and consultation services from SunPower Solar.",
+    "Solar installation, maintenance, and consultation services from Adhira Solar.",
 };
 
 export default function ServicesPage() {

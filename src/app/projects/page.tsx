@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Explore past solar installations by SunPower Solar.",
+  description: "Explore past solar installations by Adhira Solar.",
 };
 
 const showcase = [

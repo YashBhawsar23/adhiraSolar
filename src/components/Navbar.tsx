@@ -21,7 +21,7 @@ export function Navbar() {
             <SunLogo className="h-6 w-6" />
           </span>
           <span className="font-semibold tracking-tight text-white">
-            SunPower <span className="text-solar-400">Solar</span>
+            Adhira <span className="text-solar-400">Solar</span>
           </span>
         </Link>
 

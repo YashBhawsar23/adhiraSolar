@@ -42,7 +42,7 @@ export default function ContactPage() {
               <div className="mt-6 overflow-hidden rounded-3xl border border-white/10 bg-ocean-800/60 shadow-sm">
                 <div className="aspect-[4/3] w-full">
                   <iframe
-                    title="SunPower Solar location"
+                    title="Adhira Solar location"
                     className="h-full w-full"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
@@ -58,7 +58,7 @@ export default function ContactPage() {
                   </p>
                   <p>
                     <span className="font-semibold text-white">Email:</span>{" "}
-                    hello@sunpowersolar.com
+                    hello@adhirasolarpower.com
                   </p>
                   <p className="sm:col-span-2">
                     <span className="font-semibold text-white">Hours:</span>{" "}
