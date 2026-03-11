@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Community solar illustration">
+  <defs>
+    <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0F1B33"/>
+      <stop offset="1" stop-color="#12254A"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ECFDF5"/>
+      <stop offset="1" stop-color="#D1FAE5"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <path d="M0 300C160 240 320 340 480 290C640 240 800 300 960 260V600H0Z" fill="url(#field)"/>
+  <circle cx="780" cy="110" r="62" fill="#F59E0B" opacity="0.9"/>
+  <g transform="translate(120 260)" opacity="0.95">
+    <g>
+      <rect x="0" y="80" width="720" height="180" rx="28" fill="#FFFFFF" opacity="0.55"/>
+      <g transform="translate(40 105)">
+        <g fill="url(#grad)">
+          <rect width="200" height="120" rx="18"/>
+          <rect x="220" width="200" height="120" rx="18"/>
+          <rect x="440" width="200" height="120" rx="18"/>
+        </g>
+        <g stroke="#FBBF24" opacity="0.35">
+          <rect width="200" height="120" rx="18" fill="none"/>
+          <rect x="220" width="200" height="120" rx="18" fill="none"/>
+          <rect x="440" width="200" height="120" rx="18" fill="none"/>
+        </g>
+        <g stroke="#93C5FD" opacity="0.25">
+          <path d="M20 28h160M20 58h160M20 88h160"/>
+          <path d="M240 28h160M240 58h160M240 88h160"/>
+          <path d="M460 28h160M460 58h160M460 88h160"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(120 420)" opacity="0.9">
+    <circle cx="30" cy="30" r="30" fill="#10B981" opacity="0.9"/>
+    <circle cx="100" cy="30" r="30" fill="#FBBF24" opacity="0.9"/>
+    <circle cx="170" cy="30" r="30" fill="#10B981" opacity="0.9"/>
+    <circle cx="240" cy="30" r="30" fill="#FBBF24" opacity="0.9"/>
+    <circle cx="310" cy="30" r="30" fill="#10B981" opacity="0.9"/>
+  </g>
+</svg>
+

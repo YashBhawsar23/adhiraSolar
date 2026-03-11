@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Commercial solar array illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFFBEB"/>
+      <stop offset="0.55" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0F1B33"/>
+      <stop offset="1" stop-color="#12254A"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="170" cy="140" r="58" fill="#FBBF24" opacity="0.9"/>
+  <g opacity="0.95">
+    <rect x="120" y="260" width="720" height="250" rx="30" fill="#0B1220"/>
+    <rect x="160" y="300" width="640" height="170" rx="22" fill="#0F1B33"/>
+    <g transform="translate(190 330)" opacity="0.9">
+      <g fill="url(#panel)">
+        <rect width="170" height="110" rx="16"/>
+        <rect x="190" width="170" height="110" rx="16"/>
+        <rect x="380" width="170" height="110" rx="16"/>
+        <rect x="570" width="170" height="110" rx="16"/>
+      </g>
+      <g stroke="#FBBF24" opacity="0.35">
+        <rect width="170" height="110" rx="16" fill="none"/>
+        <rect x="190" width="170" height="110" rx="16" fill="none"/>
+        <rect x="380" width="170" height="110" rx="16" fill="none"/>
+        <rect x="570" width="170" height="110" rx="16" fill="none"/>
+      </g>
+      <g stroke="#93C5FD" opacity="0.25">
+        <path d="M20 25h130M20 55h130M20 85h130"/>
+        <path d="M210 25h130M210 55h130M210 85h130"/>
+        <path d="M400 25h130M400 55h130M400 85h130"/>
+        <path d="M590 25h130M590 55h130M590 85h130"/>
+      </g>
+    </g>
+  </g>
+  <path d="M0 520C160 470 290 560 460 520C650 475 770 455 960 500V600H0Z" fill="#E2E8F0"/>
+</svg>
+

@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dark forest theme */
+  --background: #070f0a;
+  --foreground: #f8fafc;
 }
 
 @theme inline {
@@ -10,17 +11,314 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand palette */
+  /* Gold */
+  --color-solar-50: #fffbeb;
+  --color-solar-100: #fef3c7;
+  --color-solar-400: #f6c453;
+  --color-solar-500: #f0b429;
+  --color-solar-600: #d79615;
+
+  /* Green */
+  --color-eco-50: #ecfdf5;
+  --color-eco-100: #d1fae5;
+  --color-eco-500: #22c55e;
+  --color-eco-600: #16a34a;
+
+  /* Forest surfaces */
+  --color-ocean-900: #061008;
+  --color-ocean-800: #0b1610;
+  --color-ocean-700: #0f1f16;
+
+  /* Animation tokens */
+  --animate-fade-up: fade-up 650ms cubic-bezier(.22,1,.36,1) both;
+  --animate-fade-in: fade-in 550ms ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-solar-400) 35%, black);
+}
+
+/* Subtle grid + vignette like reference */
+.solar-grid {
+  background-image:
+    radial-gradient(1000px 420px at 50% 20%, color-mix(in oklab, var(--color-solar-500) 22%, transparent), transparent 60%),
+    radial-gradient(800px 360px at 70% 30%, color-mix(in oklab, var(--color-eco-600) 18%, transparent), transparent 62%),
+    linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.25)),
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: auto, auto, auto, 56px 56px, 56px 56px;
+  background-position: center, center, center, center, center;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Trusted-by marquee styles (matches dark gold theme) */
+.tb-section {
+  background: #06090a;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tb-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(
+    ellipse,
+    rgba(251, 191, 36, 0.07) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.tb-fade-left,
+.tb-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tb-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #06090a 40%, transparent);
+}
+
+.tb-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #06090a 40%, transparent);
+}
+
+@media (min-width: 768px) {
+  .tb-fade-left,
+  .tb-fade-right {
+    width: 180px;
+  }
+}
+
+.tb-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  padding: 0 5vw;
+}
+
+.tb-line {
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12)
+  );
+}
+
+.tb-line.right {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+}
+
+.tb-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.tb-track-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.tb-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: tb-scroll 28s linear infinite;
+}
+
+.tb-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tb-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.tb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0 1.25rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: default;
+  transition: opacity 0.25s;
+}
+
+@media (min-width: 768px) {
+  .tb-item {
+    gap: 0.9rem;
+    padding: 0 3rem;
+  }
+}
+
+.tb-item:hover {
+  opacity: 1 !important;
+}
+
+.tb-track:not(:hover) .tb-item {
+  opacity: 0.55;
+}
+
+.tb-item:hover .tb-abbr {
+  background: rgba(251, 191, 36, 0.15);
+  border-color: rgba(251, 191, 36, 0.4);
+  color: #fbbf24;
+}
+
+.tb-abbr {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    color 0.25s;
+}
+
+@media (min-width: 768px) {
+  .tb-abbr {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 0.6rem;
+  }
+}
+
+.tb-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  transition: color 0.25s;
+}
+
+@media (min-width: 768px) {
+  .tb-name {
+    font-size: 1rem;
+  }
+}
+
+.tb-item:hover .tb-name {
+  color: #fff;
+}
+
+.tb-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 3rem;
+  padding: 0 5vw;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.tb-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(251, 191, 36, 0.5);
+  flex-shrink: 0;
+}
+
+@media (max-width: 400px) {
+  .tb-dot {
+    display: none;
+  }
+}
+
+.tb-footer-text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.tb-footer-highlight {
+  color: rgba(251, 191, 36, 0.6);
+  font-weight: 500;
+}
+
